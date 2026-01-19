@@ -1,0 +1,53 @@
+.laundry-service {
+  padding: 2rem;
+}
+
+.service-info {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.service-info h2 {
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.service-info ol {
+  margin-left: 2rem;
+  line-height: 2;
+}
+
+.booking-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.booking-form h2 {
+  margin-bottom: 1.5rem;
+  color: #667eea;
+}
+
+.booking-form input,
+.booking-form textarea,
+.booking-form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.booking-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.booking-form button {
+  width: 100%;
+}
