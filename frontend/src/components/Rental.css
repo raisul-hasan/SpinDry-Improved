@@ -1,80 +1,287 @@
 .rental {
-  padding: 2rem;
+  min-height: calc(100vh - 200px);
 }
 
-.rental h1 {
+/* Hero Section */
+.rental-hero {
   text-align: center;
-  margin-bottom: 1rem;
+  padding: 120px 2rem 100px;
+  position: relative;
+  overflow: hidden;
+  color: var(--qondri-white);
 }
 
-.rental > p {
+.rental-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.rental-hero .hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.rental-hero .hero-title {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: var(--qondri-white);
+}
+
+.rental-hero .hero-subtitle {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--qondri-white);
+  opacity: 0.95;
+}
+
+/* Features Section */
+.rental-features {
+  padding: 60px 2rem;
+  background-color: var(--qondri-primary);
+}
+
+.rental-features .features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rental-features .feature-card {
   text-align: center;
-  margin-bottom: 2rem;
-  color: #666;
+  padding: 30px 20px;
+  background-color: var(--qondri-white);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.rental-features .feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(var(--qondri-black-rgb), 0.08);
+}
+
+.rental-features .feature-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--qondri-primary);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.rental-features .feature-icon i {
+  font-size: 26px;
+  color: var(--qondri-base);
+}
+
+.rental-features .feature-card:hover .feature-icon {
+  background-color: var(--qondri-base);
+}
+
+.rental-features .feature-card:hover .feature-icon i {
+  color: var(--qondri-white);
+}
+
+.rental-features .feature-card h3 {
+  font-size: 17px;
+  color: var(--qondri-black);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.rental-features .feature-card p {
+  color: var(--qondri-gray);
+  font-size: 14px;
+}
+
+/* Filter Section */
+.filter-section {
+  padding: 40px 2rem;
+  background-color: var(--qondri-white);
+  border-bottom: 1px solid var(--qondri-bdr-color);
 }
 
 .filter-buttons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 12px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.filter-buttons button {
-  padding: 0.75rem 1.5rem;
-  border: 2px solid #667eea;
-  background-color: #fff;
-  color: #667eea;
-  border-radius: 5px;
+.filter-btn {
+  padding: 10px 24px;
+  border: 2px solid var(--qondri-bdr-color);
+  background-color: var(--qondri-white);
+  color: var(--qondri-black);
+  border-radius: 25px;
   cursor: pointer;
-  transition: all 0.3s;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-family: var(--qondri-font);
 }
 
-.filter-buttons button:hover,
-.filter-buttons button.active {
-  background-color: #667eea;
-  color: #fff;
+.filter-btn:hover {
+  border-color: var(--qondri-base);
+  color: var(--qondri-base);
+}
+
+.filter-btn.active {
+  background-color: var(--qondri-base);
+  color: var(--qondri-white);
+  border-color: var(--qondri-base);
+}
+
+/* Rentals Section */
+.rentals-section {
+  padding: 60px 2rem 80px;
+  background-color: var(--qondri-primary);
 }
 
 .rentals-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .rental-card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid var(--qondri-bdr-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: var(--qondri-white);
+  display: flex;
+  flex-direction: column;
 }
 
 .rental-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(var(--qondri-black-rgb), 0.1);
+  border-color: var(--qondri-base);
+}
+
+.rental-image {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--qondri-primary);
 }
 
 .rental-image img {
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.rental-card:hover .rental-image img {
+  transform: scale(1.05);
+}
+
+.rental-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--qondri-base);
+  color: var(--qondri-white);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.rental-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .rental-card h3 {
-  margin-bottom: 0.5rem;
-  color: #333;
+  margin-bottom: 8px;
+  color: var(--qondri-black);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.rental-description {
+  color: var(--qondri-gray);
+  font-size: 14px;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.rental-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
 }
 
 .rental-price {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #667eea;
-  margin: 1rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
 }
 
-.rental-card button {
-  width: 100%;
+.rental-price .price {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--qondri-base);
+}
+
+.rental-price .period {
+  font-size: 14px;
+  color: var(--qondri-gray);
+}
+
+.rental-footer .cta-button {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .rental-features .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .rental-hero {
+    padding: 100px 2rem 80px;
+  }
+  
+  .rental-hero .hero-title {
+    font-size: 36px;
+  }
+  
+  .rental-features .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .rentals-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-buttons {
+    gap: 8px;
+  }
+  
+  .filter-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
 }

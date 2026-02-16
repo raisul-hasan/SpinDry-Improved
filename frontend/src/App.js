@@ -7,12 +7,17 @@ import LaundryService from './components/LaundryService';
 import Shop from './components/Shop';
 import Cart from './components/Cart';
 import Rental from './components/Rental';
+import Login from './components/Login';
+import Register from './components/Register';
+import ResetPassword from './components/ResetPassword';
+import Profile from './components/Profile';
+import Orders from './components/Orders';
 import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="page-wrapper">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -20,6 +25,11 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/rental" element={<Rental />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/orders" element={<Orders />} />
         </Routes>
         <Footer />
       </div>
